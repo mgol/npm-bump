@@ -26,6 +26,7 @@
     }
   ],
   "files": [
+    "bin",
     "lib"
   ],
   "dependencies": {
