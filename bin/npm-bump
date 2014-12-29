@@ -4,4 +4,12 @@
 
 var args = process.argv.slice(2);
 
-require('../lib/cli').custom(args[1], args[2])(args[0]);
+try {
+    require('../lib/cli').custom(args[1], args[2])(args[0]);
+} catch (error) {
+    if (error.name === 'UsageError') {
+        console.error(error.message);
+    } else {
+        throw error;
+    }
+}
