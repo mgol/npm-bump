@@ -1,0 +1,53 @@
+{
+  "name": "npm-bump",
+  "version": "0.0.1-pre",
+  "description": "A better `npm version major|minor|patch`",
+  "homepage": "https://github.com/mzgol/npm-nump",
+  "author": {
+    "name": "Michał Gołębiowski",
+    "email": "m.goleb@gmail.com"
+  },
+  "keywords": [
+    "version",
+    "versioning",
+    "bump",
+    "npm"
+  ],
+  "bin": "bin/npm-bump",
+  "main": "lib/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzgol/npm-bump.git"
+  },
+  "bugs": "https://github.com/mzgol/npm-bump/issues",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "inquirer": "0.8.0",
+    "semver": "4.2.0"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-eslint": "2.1.0",
+    "grunt-jscs": "0.8.1",
+    "grunt-mocha-test": "0.12.4",
+    "jscs-trailing-comma": "0.3.0",
+    "load-grunt-tasks": "2.0.0",
+    "mocha": "2.1.0",
+    "time-grunt": "1.0.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "engines": {
+    "node": ">=0.11.14"
+  },
+  "engineStrict": true
+}

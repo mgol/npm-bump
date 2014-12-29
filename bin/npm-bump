@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var args = process.argv.slice(2);
+
+require('../lib/cli').custom(args[1], args[2])(args[0]);
