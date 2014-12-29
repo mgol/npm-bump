@@ -13,7 +13,7 @@ To install invoke:
 ```shell
 npm install -g npm-bump
 ```
-You now have the `npm-bump` binary availab.e
+You now have the `npm-bump` binary available.
 
 If you want to use it as a module, invoke:
 
