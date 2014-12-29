@@ -2,8 +2,10 @@
 
 > A better `npm version major|minor|patch`
 
+<!--
 [![Build Status](https://travis-ci.org/mzgol/npm-bump.svg?branch=master)](https://travis-ci.org/mzgol/npm-bump)
 [![Build status](https://ci.appveyor.com/api/projects/status/3lddln8y5hvn5pq0/branch/master?svg=true)](https://ci.appveyor.com/project/mzgol/npm-bump/branch/master)
+-->
 
 ## Installation
 
