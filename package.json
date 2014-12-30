@@ -31,7 +31,8 @@
   ],
   "dependencies": {
     "inquirer": "0.8.0",
-    "semver": "4.2.0"
+    "semver": "4.2.0",
+    "shell-quote": "1.4.2"
   },
   "devDependencies": {
     "grunt": "0.4.5",
