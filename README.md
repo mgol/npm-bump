@@ -59,11 +59,11 @@ You can optionally pass the remote name and the branch name to be used. By defau
 
 1. When using from shell:
 ```shell
-npm-bump kind remote branch
+npm-bump kind remoteName branch
 ```
 2. When using as a library:
 ```js
-var npmBump = require('npm-bump').custom(remote, branch);
+var npmBump = require('npm-bump').custom(remoteName, branch);
 npmBump(kind);
 ```
 
