@@ -30,16 +30,16 @@ The aim of this module is to keep a repository in a state where if the `version`
 Once the package has been installed, it may be used from the terminal:
 
 ```shell
-npm-bump kind
+npm-bump releaseType
 ```
 
-where `kind` is one of: `major`, `minor` and `patch`.
+where `releaseType` is one of: `major`, `minor` and `patch`.
 
 To use as a module, do the following:
 
 ```js
 var npmBump = require('npm-bump');
-npmBump(kind);
+npmBump(releaseType);
 ```
 
 Regardless of using the package as a binary or a module, invoking the above code will result in:
@@ -59,12 +59,12 @@ You can optionally pass the remote name and the branch name to be used. By defau
 
 1. When using from shell:
 ```shell
-npm-bump kind remoteName branch
+npm-bump releaseType remoteName branch
 ```
 2. When using as a library:
 ```js
 var npmBump = require('npm-bump').custom(remoteName, branch);
-npmBump(kind);
+npmBump(releaseType);
 ```
 
 ## Contributing
