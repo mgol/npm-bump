@@ -23,7 +23,7 @@ npm install npm-bump --save
 
 ## Rationale
 
-The aim of this module is to keep a repository in a state where if the `version` value in `package.json` points to a stable version, it's a tagged commit that was published to npm. Since one can add Git endpoints as packages "versions", this allows to quickly check if an installed dependency uses a pre-release or a stable version.
+The aim of this module is to keep a repository in a state where if the `version` value in `package.json` points to a stable version, it's a tagged commit that was published to npm. Since one can add Git endpoints as packages' "versions", this allows to quickly check if an installed dependency uses a pre-release or a stable version.
 
 ## Usage
 
