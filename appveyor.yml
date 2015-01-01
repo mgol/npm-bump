@@ -13,8 +13,8 @@ environment:
 install:
   # Get the Node version with matching major & minor numbers
   - ps: Install-Product node $env:nodejs_version
-  # Prevent Bower from asking questions.
-  - set CI=true
+  # Log HTTP requests
+  - npm config set loglevel http
   # Typical npm stuff.
   - npm install
 
