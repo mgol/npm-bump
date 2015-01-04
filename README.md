@@ -53,6 +53,17 @@ If the user goes along, the new version gets published and created commits and t
 
 Until the user gives the final green light, everything happens locally and is fully reversible.
 
+### Pre-releases
+
+If you supply `releaseType` other than `major`/`minor`/`patch`, it will be treated as a pre-release identifier and a proper pre-release version will be tagged & published. Such a version will be published with an npm tag equal to the identifier. For example, if your package is currently at version `1.0.0-pre`, the following command:
+
+```shell
+npm-bump beta
+```
+
+will publish a version `1.0.0-beta.0` under the tag `beta` and bump the version to `1.0.0-beta.1-pre`.
+
+
 ## Options
 
 You can optionally pass the remote name and the branch name to be used. By default the remote is assumed to be `origin` and the branch: `master`. To customize, do the following:
