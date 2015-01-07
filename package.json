@@ -20,11 +20,7 @@
     "url": "https://github.com/mzgol/npm-bump.git"
   },
   "bugs": "https://github.com/mzgol/npm-bump/issues",
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
+  "license": "MIT",
   "files": [
     "bin",
     "lib"
