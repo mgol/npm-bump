@@ -8,7 +8,7 @@ init:
 environment:
   matrix:
     # Node.js
-    - nodejs_version: "0.11"
+    - nodejs_version: "0.12"
     # io.js
     - nodejs_version: "1"
 
