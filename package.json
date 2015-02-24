@@ -46,6 +46,5 @@
   },
   "engines": {
     "node": ">=0.11.14"
-  },
-  "engineStrict": true
+  }
 }
