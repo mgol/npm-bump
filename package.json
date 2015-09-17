@@ -1,6 +1,6 @@
 {
   "name": "npm-bump",
-  "version": "0.0.15-pre",
+  "version": "0.0.15",
   "description": "A better `npm version major|minor|patch`",
   "homepage": "https://github.com/mzgol/npm-nump",
   "author": {
