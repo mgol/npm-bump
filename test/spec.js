@@ -1,5 +1,5 @@
 'use strict';
 
-describe('npm-bump', function () {
+describe('npm-bump', () => {
     // TODO
 });

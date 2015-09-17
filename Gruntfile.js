@@ -14,19 +14,6 @@ module.exports = function (grunt) {
             },
         },
 
-        jscs: {
-            all: {
-                src: [
-                    'Gruntfile.js',
-                    'lib/**/*.js',
-                    'test/**/*.js',
-                ],
-                options: {
-                    config: '.jscsrc',
-                },
-            },
-        },
-
         mochaTest: {
             all: {
                 options: {
@@ -42,7 +29,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('lint', [
         'eslint',
-        'jscs',
     ]);
 
     grunt.registerTask('test', ['mochaTest']);

@@ -1,4 +1,8 @@
 {
+    "extends": "mzgol",
+
+    "root": true,
+
     "env": {
         "node": true
     },
@@ -6,38 +10,8 @@
     "rules": {
         // Rules are divided into sections from http://eslint.org/docs/rules/
 
-        // Possible errors
-        "no-comma-dangle": 0,
-        "no-console": 0,
-
-        // Best practices
-        "block-scoped-var": 2,
-        "eqeqeq": [2, "smart"],
-        "no-else-return": 2,
-        "no-floating-decimal": 2,
-        "wrap-iife": [2, "inside"],
-
-        // Variables
-        "no-use-before-define": 0,
-        "no-shadow": 0,
-
-        // Node.js
-        "no-mixed-requires": 0,
-        "no-path-concat": 0,
-
-        // Stylistic issues
-        "brace-style": 2,
-        "camelcase": 0,
-        "new-cap": 0,
-        "no-lonely-if": 2,
-        "no-underscore-dangle": 0,
-        "space-after-keywords": 2,
-        "space-in-brackets": [2, "never"],
-        "space-infix-ops": 2,
-        "quotes": [2, "single"],
-
-        // Legacy
-        "no-bitwise": 2,
-        "max-len": [2, 120, 4]
+        // ECMAScript 6
+        "prefer-spread": 0, // TODO enable in Node 5 or 6
+        "prefer-reflect": 0 // TODO enable when Node supports it
     }
 }
