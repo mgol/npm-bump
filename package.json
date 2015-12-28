@@ -2,7 +2,7 @@
   "name": "npm-bump",
   "version": "0.0.16-pre",
   "description": "A better `npm version major|minor|patch`",
-  "homepage": "https://github.com/mzgol/npm-nump",
+  "homepage": "https://github.com/mgol/npm-nump",
   "author": {
     "name": "Michał Gołębiowski",
     "email": "m.goleb@gmail.com"
@@ -17,9 +17,9 @@
   "main": "lib/cli.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mzgol/npm-bump.git"
+    "url": "https://github.com/mgol/npm-bump.git"
   },
-  "bugs": "https://github.com/mzgol/npm-bump/issues",
+  "bugs": "https://github.com/mgol/npm-bump/issues",
   "license": "MIT",
   "files": [
     "bin",
