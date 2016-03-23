@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "inquirer": "^0.12.0",
+    "minimist": "^1.2.0",
     "semver": "^5.1.0",
     "shell-quote": "^1.4.3"
   },
