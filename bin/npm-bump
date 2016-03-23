@@ -2,19 +2,30 @@
 
 'use strict';
 
-/* eslint-disable no-process-exit */
+const minimist = require('minimist');
+const npmBump = require('../lib/cli');
 
-const args = process.argv.slice(2);
-const regularArgs = args.filter(arg => !arg.startsWith('-'));
-const configArgs = args.filter(arg => arg.startsWith('-'));
-
-if (configArgs.includes('--version')) {
-    console.log(`npm-bump ${ require('../package.json').version }`);
-    process.exit(0);
-}
+const opts = minimist(process.argv.slice(2), {
+    alias: {
+        r: 'remote',
+        b: 'branch',
+        p: 'prefix',
+        s: 'suffix',
+        t: 'type',
+    },
+    default: {
+        remote: 'origin',
+        branch: 'master',
+    },
+});
 
 try {
-    require('../lib/cli').custom(regularArgs[1], regularArgs[2], regularArgs[3])(regularArgs[0]);
+    npmBump.custom({
+        remote: opts.remote || opts._[1],
+        branch: opts.branch || opts._[2],
+        prefix: opts.prefix,
+        suffix: opts.suffix,
+    })(opts.type || opts._[0]);
 } catch (error) {
     if (error.name === 'UsageError') {
         console.error(error.message);
