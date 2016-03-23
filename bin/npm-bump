@@ -14,7 +14,7 @@ if (configArgs.includes('--version')) {
 }
 
 try {
-    require('../lib/cli').custom(regularArgs[1], regularArgs[2])(regularArgs[0]);
+    require('../lib/cli').custom(regularArgs[1], regularArgs[2], regularArgs[3])(regularArgs[0]);
 } catch (error) {
     if (error.name === 'UsageError') {
         console.error(error.message);
