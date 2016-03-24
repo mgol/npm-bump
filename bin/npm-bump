@@ -2,31 +2,31 @@
 
 'use strict';
 
-const minimist  = require('minimist');
-const npmbump   = require('../lib/cli');
+const minimist = require('minimist');
+const npmbump = require('../lib/cli');
 
 const opts = minimist(process.argv.slice(2), {
-  alias : {
-    r : 'remote'
-    , b : 'branch'
-    , p : 'prefix'
-    , s : 'suffix'
-    , t : 'type'
-  }
-  , default : {
-    remote : 'origin'
-    , branch : 'master'
-  }
+  alias: {
+    r: 'remote',
+    b: 'branch',
+    p: 'prefix',
+    s: 'suffix',
+    t: 'type',
+  },
+  default: {
+    remote: 'origin',
+    branch: 'master',
+  },
 });
 
 try {
   npmbump.custom({
-    remote    : opts._[1] || opts.remote
-    , branch  : opts._[2] || opts.branch
-    , prefix  : opts.prefix
-    , suffix  : opts.suffix
+    remote: opts._[1] || opts.remote,
+    branch: opts._[2] || opts.branch,
+    prefix: opts.prefix,
+    suffix: opts.suffix,
   })(opts._[0] || opts.type);
-} catch(error) {
+} catch (error) {
   if (error.name === 'UsageError') {
     console.log(error.message);
   } else {

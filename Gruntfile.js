@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     '*.js',
-                    'bin',
+                    'bin/npm-bump',
                     'lib',
                     'test',
                 ],
