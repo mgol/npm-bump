@@ -30,7 +30,16 @@ The aim of this module is to keep a repository in a state where if the `version`
 Once the package has been installed, it may be used from the terminal:
 
 ```shell
-npm-bump releaseType
+  -t, --release-type    Type of the release, "patch", "minor" or "major"
+  -r, --remote          The remote repository (default: "origin")
+  -b, --branch          The branch to perform the release on (default: "master")
+  --ignore-npm          Boolean flag for omitting the publishing to Npm
+```
+
+So to simply release a version on branch `master` to the remote `origin`, do:
+
+```shell
+npm-bump -t releaseType
 ```
 
 where `releaseType` is one of: `major`, `minor` and `patch`.
@@ -40,6 +49,13 @@ To use as a module, do the following:
 ```js
 var npmBump = require('npm-bump');
 npmBump(releaseType);
+```
+
+Or without publishing to Npm:
+
+```js
+var npmBump = require('npm-bump');
+npmBump(releaseType, false);
 ```
 
 Regardless of using the package as a binary or a module, invoking the above code will result in:
@@ -70,12 +86,12 @@ You can optionally pass the remote name and the branch name to be used. By defau
 
 1. When using from shell:
 ```shell
-npm-bump releaseType remoteName branch
+npm-bump -t releaseType -r remoteName -b branch
 ```
 2. When using as a library:
 ```js
 var npmBump = require('npm-bump').custom(remoteName, branch);
-npmBump(releaseType);
+npmBump(releaseType, [<ignoreNpm>]);
 ```
 
 ## Supported Node.js versions
