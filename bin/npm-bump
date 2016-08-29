@@ -2,10 +2,14 @@
 
 'use strict';
 
-const args = process.argv.slice(2);
+const args = require('minimist')(process.argv.slice(2), {
+    '--branch': '-b',
+    '--remote': '-r',
+    '--release-type': '-t'
+});
 
 try {
-    require('../lib/cli').custom(args[1], args[2])(args[0]);
+    require('../lib/cli').custom(args.r, args.b)(args.t, args['ignore-npm']);
 } catch (error) {
     if (error.name === 'UsageError') {
         console.error(error.message);
