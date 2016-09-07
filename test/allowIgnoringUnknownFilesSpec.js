@@ -4,9 +4,7 @@ const assert = require('chai').assert;
 const rewire = require('rewire');
 const mockery = require('mockery');
 
-const ERROR_UNCOMMITTED_CHANGES =
-    'You have uncommited changes! Commit them before running this script';
-    // todo should be imported from the module
+const ERROR_UNCOMMITTED_CHANGES = require('../lib/errors').ERROR_UNCOMMITTED_CHANGES;
 
 describe('allow ignoring unknown files', () => {
 
