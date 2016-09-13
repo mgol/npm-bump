@@ -28,7 +28,7 @@ try {
   })(opts._[0] || opts.type);
 } catch (error) {
   if (error.name === 'UsageError') {
-    console.log(error.message);
+    console.error(error.message);
   } else {
     throw error;
   }
