@@ -66,12 +66,13 @@ will publish a version `1.0.0-beta.0` under the tag `beta` and bump the version 
 
 ## Options
 
-You can optionally pass the remote name and the branch name to be used. By default the remote is assumed to be `origin` and the branch: `master`. To customize, do the following:
+You can optionally pass the remote name and the branch name to be used, in addition to a prefix/suffix to be applied to version bump commit message. By default the remote is assumed to be `origin` and the branch: `master`. To customize, do the following:
 
 1. When using from shell:
 ```shell
-npm-bump releaseType remoteName branch
+npm-bump releaseType -r remoteName -b branch -p issue-prefix
 ```
+
 2. When using as a library:
 ```js
 var npmBump = require('npm-bump').custom(remoteName, branch);
