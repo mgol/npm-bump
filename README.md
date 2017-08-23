@@ -85,4 +85,4 @@ This project aims to support the latest Node.js LTS versions in the "active" pha
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using `npm test`.
 
 ## License
-Copyright (c) 2014 Michał Gołębiowski. Licensed under the MIT license.
+Copyright (c) 2014 Michał Gołębiowski-Owczarek. Licensed under the MIT license.
