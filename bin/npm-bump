@@ -2,10 +2,19 @@
 
 'use strict';
 
+/* eslint-disable no-process-exit */
+
 const args = process.argv.slice(2);
+const regularArgs = args.filter(arg => !arg.startsWith('-'));
+const configArgs = args.filter(arg => arg.startsWith('-'));
+
+if (configArgs.includes('--version')) {
+    console.log(`npm-bump ${ require('../package.json').version }`);
+    process.exit(0);
+}
 
 try {
-    require('../lib/cli').custom(args[1], args[2])(args[0]);
+    require('../lib/cli').custom(regularArgs[1], regularArgs[2])(regularArgs[0]);
 } catch (error) {
     if (error.name === 'UsageError') {
         console.error(error.message);

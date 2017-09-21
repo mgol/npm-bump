@@ -42,6 +42,12 @@ var npmBump = require('npm-bump');
 npmBump(releaseType);
 ```
 
+You can check the version of `npm-bump` via:
+
+```shell
+npm-bump --version
+```
+
 Regardless of using the package as a binary or a module, invoking the above code will result in:
 
 1. Creating a new commit that increases the project version to the nearest stable one having a larger `major`/`minor`/`patch` than currently.
