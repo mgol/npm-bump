@@ -2,7 +2,7 @@
   "name": "npm-bump",
   "version": "0.0.24-pre",
   "description": "A better `npm version major|minor|patch`",
-  "homepage": "https://github.com/mgol/npm-nump",
+  "homepage": "https://github.com/mgol/npm-bump",
   "author": {
     "name": "Michał Gołębiowski-Owczarek",
     "email": "m.goleb@gmail.com"
