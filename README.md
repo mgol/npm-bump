@@ -85,7 +85,7 @@ npmBump(releaseType);
 ```
 
 ## Supported Node.js versions
-This project aims to support all Node.js versions supported upstream (see [Release README](https://github.com/nodejs/Release/blob/master/README.md) for more details).
+This project aims to support all Node.js versions supported upstream with the exception of those in maintenance mode (see [Release README](https://github.com/nodejs/Release/blob/master/README.md) for more details).
 
 ## Contributing
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using `npm test`.
