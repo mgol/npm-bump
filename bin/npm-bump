@@ -2,6 +2,8 @@
 
 'use strict';
 
+/* eslint-disable no-process-exit */
+
 const minimist = require('minimist');
 const npmBump = require('../lib/cli');
 
@@ -12,12 +14,18 @@ const opts = minimist(process.argv.slice(2), {
         p: 'prefix',
         s: 'suffix',
         t: 'type',
+        v: 'version',
     },
     default: {
         remote: 'origin',
         branch: 'master',
     },
 });
+
+if (opts.version) {
+    console.log(`npm-bump ${ require('../package.json').version }`);
+    process.exit(0);
+}
 
 try {
     npmBump.custom({
