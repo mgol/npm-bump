@@ -8,9 +8,9 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     '*.js',
-                    'bin',
-                    'lib',
-                    'test',
+                    'bin/**/*.js',
+                    'lib/**/*.js',
+                    'test/**/*.js',
                 ],
             },
         },
