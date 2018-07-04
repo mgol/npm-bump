@@ -12,7 +12,6 @@ const opts = minimist(process.argv.slice(2), {
         r: 'remote',
         b: 'branch',
         p: 'prefix',
-        s: 'suffix',
         t: 'type',
         v: 'version',
     },
@@ -32,7 +31,6 @@ try {
         remote: opts.remote || opts._[1],
         branch: opts.branch || opts._[2],
         prefix: opts.prefix,
-        suffix: opts.suffix,
     })(opts.type || opts._[0]);
 } catch (error) {
     if (error.name === 'UsageError') {
