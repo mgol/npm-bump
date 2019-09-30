@@ -10,9 +10,11 @@
 ## Installation
 
 To install invoke:
+
 ```shell
 npm install -g npm-bump
 ```
+
 You now have the `npm-bump` binary available.
 
 If you want to use it as a module, invoke:
@@ -69,27 +71,31 @@ npm-bump beta
 
 will publish a version `1.0.0-beta.0` under the tag `beta` and bump the version to `1.0.0-beta.1-pre`.
 
-
 ## Options
 
 You can optionally pass the remote name and the branch name to be used, in addition to a prefix/suffix to be applied to version bump commit message. By default the remote is assumed to be `origin` and the branch: `master`. To customize, do the following:
 
 1. When using from shell:
+
 ```shell
 npm-bump releaseType -r remoteName -b branch -p issue-prefix
 ```
 
 2. When using as a library:
+
 ```js
 var npmBump = require('npm-bump').custom(remoteName, branch);
 npmBump(releaseType);
 ```
 
 ## Supported Node.js versions
+
 This project aims to support all Node.js versions supported upstream with the exception of those in maintenance mode (see [Release README](https://github.com/nodejs/Release/blob/master/README.md) for more details).
 
 ## Contributing
+
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using `npm test`.
 
 ## License
+
 Copyright (c) 2014 Michał Gołębiowski-Owczarek. Licensed under the MIT license.
