@@ -36,10 +36,8 @@
         "eslint-config-mgol": "0.0.46",
         "husky": "3.0.7",
         "lint-staged": "9.4.0",
-        "load-grunt-tasks": "5.1.0",
         "mocha": "6.2.1",
-        "prettier": "1.18.2",
-        "time-grunt": "2.0.0"
+        "prettier": "1.18.2"
     },
     "scripts": {
         "prettier-check": "prettier --check '**/*.{json,js,yml,yaml,md}'",
