@@ -1,71 +1,71 @@
 {
-  "name": "npm-bump",
-  "version": "0.0.27-pre",
-  "description": "A better `npm version major|minor|patch`",
-  "homepage": "https://github.com/mgol/npm-bump",
-  "author": {
-    "name": "Michał Gołębiowski-Owczarek",
-    "email": "m.goleb@gmail.com"
-  },
-  "keywords": [
-    "version",
-    "versioning",
-    "bump",
-    "npm"
-  ],
-  "bin": "bin/npm-bump",
-  "main": "lib/cli.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mgol/npm-bump.git"
-  },
-  "bugs": "https://github.com/mgol/npm-bump/issues",
-  "license": "MIT",
-  "files": [
-    "bin",
-    "lib"
-  ],
-  "dependencies": {
-    "inquirer": "^7.0.0",
-    "minimist": "^1.2.0",
-    "semver": "^6.3.0",
-    "shell-quote": "^1.7.2"
-  },
-  "devDependencies": {
-    "eslint-config-mgol": "0.0.46",
-    "grunt": "1.0.4",
-    "grunt-cli": "1.3.2",
-    "grunt-eslint": "22.0.0",
-    "grunt-mocha-test": "0.13.3",
-    "husky": "3.0.7",
-    "lint-staged": "9.4.0",
-    "load-grunt-tasks": "5.1.0",
-    "mocha": "6.2.1",
-    "prettier": "1.18.2",
-    "time-grunt": "2.0.0"
-  },
-  "scripts": {
-    "prettier-check": "prettier --check '**/*.{json,js,yml,yaml,md}'",
-    "prettier-format": "prettier --write '**/*.{json,js,yml,yaml,md}'",
-    "test": "grunt"
-  },
-  "engines": {
-    "node": ">=4.4 <6 || >=6.9"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{json,yml,yaml,md}": [
-      "prettier --write",
-      "git add"
+    "name": "npm-bump",
+    "version": "0.0.27-pre",
+    "description": "A better `npm version major|minor|patch`",
+    "homepage": "https://github.com/mgol/npm-bump",
+    "author": {
+        "name": "Michał Gołębiowski-Owczarek",
+        "email": "m.goleb@gmail.com"
+    },
+    "keywords": [
+        "version",
+        "versioning",
+        "bump",
+        "npm"
     ],
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
-  }
+    "bin": "bin/npm-bump",
+    "main": "lib/cli.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mgol/npm-bump.git"
+    },
+    "bugs": "https://github.com/mgol/npm-bump/issues",
+    "license": "MIT",
+    "files": [
+        "bin",
+        "lib"
+    ],
+    "dependencies": {
+        "inquirer": "^7.0.0",
+        "minimist": "^1.2.0",
+        "semver": "^6.3.0",
+        "shell-quote": "^1.7.2"
+    },
+    "devDependencies": {
+        "eslint-config-mgol": "0.0.46",
+        "grunt": "1.0.4",
+        "grunt-cli": "1.3.2",
+        "grunt-eslint": "22.0.0",
+        "grunt-mocha-test": "0.13.3",
+        "husky": "3.0.7",
+        "lint-staged": "9.4.0",
+        "load-grunt-tasks": "5.1.0",
+        "mocha": "6.2.1",
+        "prettier": "1.18.2",
+        "time-grunt": "2.0.0"
+    },
+    "scripts": {
+        "prettier-check": "prettier --check '**/*.{json,js,yml,yaml,md}'",
+        "prettier-format": "prettier --write '**/*.{json,js,yml,yaml,md}'",
+        "test": "grunt"
+    },
+    "engines": {
+        "node": ">=4.4 <6 || >=6.9"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{json,yml,yaml,md}": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.js": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ]
+    }
 }
