@@ -1,5 +1,9 @@
 'use strict';
 
+const assert = require('assert');
+
 describe('npm-bump', () => {
-    // TODO
+    it('dummy test', () => {
+        assert.strictEqual(true, true);
+    });
 });
