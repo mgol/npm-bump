@@ -46,7 +46,7 @@ Miscellaneous:
 }
 
 if (opts.version) {
-    console.log(`npm-bump ${ require('../package.json').version }`);
+    console.log(`npm-bump ${require('../package.json').version}`);
     process.exit(0);
 }
 
