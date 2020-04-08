@@ -73,19 +73,48 @@ will publish a version `1.0.0-beta.0` under the tag `beta` and bump the version 
 
 ## Options
 
-You can optionally pass the remote name and the branch name to be used, in addition to a prefix/suffix to be applied to version bump commit message. By default the remote is assumed to be `origin` and the branch: `master`. To customize, do the following:
+You can optionally pass the remote name and the branch name to be used, in addition to a prefix to be applied to the version bump commit message. By default the remote is assumed to be `origin` and the branch: `master`.
+
+You can also provide the `access` option with the `public` or `private` value to declare whether the package should be public or private. When not provided, it uses default npm behavior: scoped packages are private & unscoped ones - public.
+
+To customize, do the following:
 
 1. When using from shell:
 
 ```shell
-npm-bump releaseType -r remoteName -b branch -p issue-prefix
+npm-bump minor --remote origin --branch master --prefix "[no-ci]" --access public
 ```
+
+or:
+
+```shell
+npm-bump minor -r origin -b master -p "[no-ci]" ---access public
+```
+
+Run:
+
+```shell
+npm-bump --help
+```
+
+or:
+
+```shell
+npm-bump -h
+```
+
+to see the full information about accepted options.
 
 2. When using as a library:
 
 ```js
-var npmBump = require('npm-bump').custom(remoteName, branch);
-npmBump(releaseType);
+var npmBump = require('npm-bump').custom({
+    remote: 'origin',
+    branch: 'master',
+    prefix: '[no-ci]',
+    access: 'public',
+});
+npmBump(minor);
 ```
 
 ## Supported Node.js versions

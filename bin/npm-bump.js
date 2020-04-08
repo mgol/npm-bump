@@ -33,10 +33,13 @@ USAGE:
 where release-type can be major, minor, patch or a custom name 
 
 Configuration:
-    -r, --remote    The remote name to push to, origin by default
-    -b, --branch    The branch name to push, master by default
-    -p, --prefix    The branch name to push, master by default
-    -t, --type      An alternative way to pass the release type (as described above) 
+    -r, --remote    Remote name to push to, origin by default
+    -b, --branch    Branch name to push, master by default
+    -p, --prefix    Prefix applied to the version bump commit message
+    -t, --type      An alternative way to pass the release type (as described above)
+        --access    Indicate whether the package is public or private (value: "public" or "private").
+                    By default, uses default npm behavior: unscoped packages are public,
+                    scoped ones: private. 
 
 Miscellaneous:
     -h, --help      Display this help
@@ -55,10 +58,12 @@ try {
         remote: opts.remote,
         branch: opts.branch,
         prefix: opts.prefix,
+        access: opts.access,
     })(opts.type || opts._[0]);
 } catch (error) {
     if (error.name === 'UsageError') {
         console.error(error.message);
+        process.exitCode = 1;
     } else {
         throw error;
     }
