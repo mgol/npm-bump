@@ -52,8 +52,8 @@ if (opts.version) {
 
 try {
     npmBump.custom({
-        remote: opts.remote || opts._[1],
-        branch: opts.branch || opts._[2],
+        remote: opts.remote,
+        branch: opts.branch,
         prefix: opts.prefix,
     })(opts.type || opts._[0]);
 } catch (error) {
