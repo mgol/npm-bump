@@ -21,7 +21,7 @@ const opts = minimist(process.argv.slice(2), {
     },
     default: {
         remote: 'origin',
-        branch: 'master',
+        branch: 'main',
     },
 });
 
@@ -34,7 +34,7 @@ where release-type can be major, minor, patch or a custom name
 
 Configuration:
     -r, --remote    Remote name to push to, origin by default
-    -b, --branch    Branch name to push, master by default
+    -b, --branch    Branch name to push, main by default
     -p, --prefix    Prefix applied to the version bump commit message
     -t, --type      An alternative way to pass the release type (as described above)
         --access    Indicate whether the package is public or private (value: "public" or "private").
