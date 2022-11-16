@@ -9,8 +9,7 @@ init:
 # Test against these versions of Node.js.
 environment:
     matrix:
-        - nodejs_version: '12'
-        - nodejs_version: '13'
+        - nodejs_version: '18'
 
 # Install scripts. (runs after repo cloning)
 install:
