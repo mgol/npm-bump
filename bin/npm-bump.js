@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-'use strict';
-
 /* eslint-disable no-process-exit */
 
-const minimist = require('minimist');
-const npmBump = require('../lib/cli');
+import { readFile } from 'node:fs/promises';
+import process from 'node:process';
+import minimist from 'minimist';
+import { createNpmBump } from '../lib/cli.js';
 
 const opts = minimist(process.argv.slice(2), {
     alias: {
@@ -49,12 +49,13 @@ Miscellaneous:
 }
 
 if (opts.version) {
-    console.log(`npm-bump ${require('../package.json').version}`);
+    const packageJson = JSON.parse(await readFile('../package.json', 'utf-8'));
+    console.log(`npm-bump ${packageJson.version}`);
     process.exit(0);
 }
 
 try {
-    npmBump.custom({
+    createNpmBump({
         remote: opts.remote,
         branch: opts.branch,
         prefix: opts.prefix,

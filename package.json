@@ -2,6 +2,7 @@
     "name": "npm-bump",
     "version": "0.0.33-pre",
     "description": "A better `npm version major|minor|patch`",
+    "type": "module",
     "homepage": "https://github.com/mgol/npm-bump",
     "author": {
         "name": "Michał Gołębiowski-Owczarek",
@@ -38,13 +39,13 @@
         "eslint-config-mgol": "0.0.48",
         "husky": "8.0.2",
         "lint-staged": "13.0.3",
-        "mocha": "10.1.0",
         "prettier": "2.7.1"
     },
     "scripts": {
         "prettier-check": "prettier --check \"**/*.{json,js,yml,yaml,md}\"",
         "prettier-format": "prettier --write \"**/*.{json,js,yml,yaml,md}\"",
-        "test": "eslint . && npm run prettier-check && mocha"
+        "spec-test": "node --test test/spec.js",
+        "test": "eslint . && npm run prettier-check && npm run spec-test"
     },
     "engines": {
         "node": ">=12"
