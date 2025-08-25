@@ -29,17 +29,18 @@
         "lib"
     ],
     "dependencies": {
-        "inquirer": "^9.1.4",
-        "minimist": "^1.2.7",
-        "semver": "^7.3.8",
-        "shell-quote": "^1.7.4"
+        "inquirer": "^12.9.4",
+        "minimist": "^1.2.8",
+        "semver": "^7.7.2",
+        "shell-quote": "^1.8.3"
     },
     "devDependencies": {
-        "eslint": "8.27.0",
-        "eslint-config-mgol": "0.0.48",
-        "husky": "8.0.2",
-        "lint-staged": "13.0.3",
-        "prettier": "2.7.1"
+        "eslint": "9.34.0",
+        "eslint-config-mgol": "0.0.50",
+        "globals": "^16.3.0",
+        "husky": "9.1.7",
+        "lint-staged": "16.1.5",
+        "prettier": "3.6.2"
     },
     "scripts": {
         "prettier-check": "prettier --check \"**/*.{json,js,yml,yaml,md}\"",

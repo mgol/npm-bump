@@ -10,7 +10,7 @@ jobs:
         strategy:
             matrix:
                 platform: [ubuntu-latest, windows-latest]
-                node-version: [18.x]
+                node-version: [24.x]
 
         runs-on: ${{ matrix.platform }}
 
