@@ -49,7 +49,9 @@ Miscellaneous:
 }
 
 if (opts.version) {
-    const packageJson = JSON.parse(await readFile(`${import.meta.dirname}/../package.json`, 'utf-8'));
+    const packageJson = JSON.parse(
+        await readFile(`${import.meta.dirname}/../package.json`, 'utf-8'),
+    );
     console.log(`npm-bump ${packageJson.version}`);
     process.exit(0);
 }
